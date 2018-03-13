@@ -60,33 +60,3 @@ export interface RouteOptions<T> {
    */
   isLoggedIn: (req: Request) => boolean;
 }
-
-// const dummyHandler = () => null;
-
-// loadRoutes<'user' | 'admin'>({
-//   authMiddleware: () => null,
-//   router: Router(),
-//   routes: {
-//     '/login': {
-//       post: {
-//         method: dummyHandler,
-//         public: true,
-//       },
-//       get: {
-//         method: dummyHandler,
-//         // public: false,
-//         // public2: false,
-//         roles: 'user',
-//       },
-//       put: {
-//         method: dummyHandler,
-//         // public: false,
-//         // public2: false,
-//         roles: ['user', 'admin'],
-//       },
-//     },
-//   },
-//   // roles: ['admin' 'user'],
-//   hasRole: req => false,
-//   isLoggedIn: req => false,
-// });
