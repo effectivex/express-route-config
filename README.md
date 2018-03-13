@@ -3,7 +3,7 @@ A simple route configuration for Express apps powered by Typescript typing.
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/effectivex/express-route-config.svg)](https://greenkeeper.io/)
 [![Travis](https://img.shields.io/travis/effectivex/express-route-config.svg)](https://travis-ci.org/effectivex/express-route-config)
-[![Coveralls](https://img.shields.io/coveralls/effectivex/express-route-config.svg)](https://coveralls.io/github/effectivex/express-route-config)
+[![codecov](https://codecov.io/gh/effectivex/express-route-config/branch/master/graph/badge.svg)](https://codecov.io/gh/effectivex/express-route-config)
 [![Dev Dependencies](https://david-dm.org/effectivex/express-route-config/dev-status.svg)](https://david-dm.org/effectivex/express-route-config?type=dev)
 
 
@@ -60,6 +60,8 @@ loadRoutes<UserRole>({
     '/admin-only': {
       get: {
         method: handler,
+        // roles must be UserRole
+        // an error will be reported if there is any typo
         roles: 'admin',
       },
     },
