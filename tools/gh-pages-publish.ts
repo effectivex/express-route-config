@@ -25,5 +25,7 @@ exec('git add .');
 exec('git config user.name "Łukasz Sentkiewicz"');
 exec('git config user.email "sirmims@gmail.com"');
 exec('git commit -m "docs(docs): update gh-pages"');
-exec(`git push --force --quiet master:gh-pages`);
+exec(
+  `git push --force --quiet "git@github.com:effectivex/express-route-config.git" master:gh-pages`,
+);
 echo('Docs deployed!!');

@@ -1,17 +1,18 @@
-import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
-import sourceMaps from 'rollup-plugin-sourcemaps'
-import camelCase from 'lodash.camelcase'
-import typescript from 'rollup-plugin-typescript2'
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
+import json from 'rollup-plugin-json';
+import sourceMaps from 'rollup-plugin-sourcemaps';
+import camelCase from 'lodash.camelcase';
+import typescript from 'rollup-plugin-typescript2';
 
-const pkg = require('./package.json')
+const pkg = require('./package.json');
 
-const libraryName = 'express-route-config'
+const libraryName = 'express-route-config';
 
 export default {
   input: `src/${libraryName}.ts`,
   output: [
-    { file: pkg.main, name: camelCase(libraryName), format: 'umd' },
+    // { file: pkg.main, name: camelCase(libraryName), format: 'umd' },
     { file: pkg.module, format: 'es' },
   ],
   sourcemap: true,
@@ -30,7 +31,8 @@ export default {
     // https://github.com/rollup/rollup-plugin-node-resolve#usage
     resolve(),
 
+    json(),
     // Resolve source maps to the original source
     sourceMaps(),
   ],
-}
+};
