@@ -57,7 +57,7 @@
     "@types/supertest": "^2.0.4",
     "cross-env": "^5.0.1",
     "express": "^4.16.3",
-    "husky": "^0.14.0",
+    "husky": "^1.1.2",
     "jest": "^22.0.2",
     "lint-staged": "^7.0.0",
     "prettier": "^1.4.4",
